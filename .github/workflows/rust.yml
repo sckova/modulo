@@ -50,3 +50,4 @@ jobs:
         with:
           executable-name: modulo
           target: ${{ matrix.platform.target }}
+          changes-file: ""
