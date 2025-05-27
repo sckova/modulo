@@ -1,8 +1,15 @@
 [package]
 name = "modulo"
 description = "calculates valid resolution scales"
+license = "GNU AGPLv3"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 clap = { version = "4.*", features = ["cargo"] }
+
+[package.metadata.generate-rpm]
+assets = [
+    { source = "target/release/modulo", dest = "/usr/bin/modulo", mode = "755" },
+    ]
+
